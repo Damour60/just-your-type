@@ -2,27 +2,80 @@ body {
   background-color: hsl(0, 0%, 5%);
   overflow: hidden;
 }
+
 p {
-  color: white;
-  text-align: center;
+  color: #fff;
+}
+
+span {
+  text-decoration: line-through;
+  text-decoration-color: #800000;
+}
+
+.no, .smoke {
+  font-family: "Amatic SC", cursive;
+}
+
+.bold {
+  font-family: Cinzel, serif;
+  color: #800000;
+}
+
+.contain {
+height: 100vh;
+}
+
+.smoke {
+  color: #696969;
+}
+
+.smoke:hover {
+  animation: animate 1500ms linear forwards;
+}
+@keyframes animate {
+  0%{
+    transform: rotate(0deg) translateY(0px);
+    opacity: 1;
+    filter: blur(1px);
+  }
+    90%{
+
+      opacity: 1;
+      filter: blur(20px);
+    }
+
+    100% {
+        transform: rotate(45deg) translateY(-200px);
+        opacity: 0;
+    }
+}
+
+.smoke p:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.smoke p:nth-child(2) {
+  animation-delay: 15s;
 }
 
 .sword {
-    animation: 5s attack cubic-bezier(0,1.38,.83,.67) infinite;
+  animation: 5s attack cubic-bezier(0,1.38,.83,.67) infinite;
 }
 
 .swords {
   position: absolute;
-	width: 100%;
-	top: 50%;
-	transform: translateY(-50%);
-	text-align: center;
+  width: 100%;
+  top: 50%;
+  left: 5em;
+  transform: translateY(-50%);
+    text-align: center;
 }
 
 .sword {
   transition: transform 1s;
   display: inline-block;
-  margin: 5rem;
+  margin: 2rem;
+
   transform-origin: 50% 77%;
 }
 
@@ -79,4 +132,14 @@ p {
   position: relative; top: -.5rem;
   height: 1rem; width: 1rem;
   background-color: hsl(0, 0%, 80%);
+}
+
+.sword {
+  transform-origin: center;
+  transform: rotate(45deg);
+}
+
+.sword2 {
+  transform-origin: center;
+  transform: rotate(-45deg);
 }
