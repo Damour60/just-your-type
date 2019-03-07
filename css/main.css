@@ -1,0 +1,82 @@
+body {
+  background-color: hsl(0, 0%, 5%);
+  overflow: hidden;
+}
+p {
+  color: white;
+  text-align: center;
+}
+
+.sword {
+    animation: 5s attack cubic-bezier(0,1.38,.83,.67) infinite;
+}
+
+.swords {
+  position: absolute;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+}
+
+.sword {
+  transition: transform 1s;
+  display: inline-block;
+  margin: 5rem;
+  transform-origin: 50% 77%;
+}
+
+.blade {
+  background-color: hsl(0, 0%, 81%);
+}
+
+.knob {
+
+
+  border-radius: 50%;
+
+}
+
+.blade, .grip, .knob {
+  margin: auto;
+}
+
+.guard, .grip {
+  background-color: hsl(53, 19%, 22%);
+}
+
+.knight {
+  width: 5rem;
+}
+
+.knight .blade {
+  height: 20rem;
+  width: 1rem;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  box-shadow: -.5rem 0 0 0 hsla(0, 0%, 43%, .5) inset;
+}
+
+.knight .guard, .knight  .grip {
+  background-color: hsl(53, 7%, 41%);
+}
+
+.knight .guard {
+  height: 0.45rem;
+  width: 100%;
+  border-radius: 33%;
+}
+
+.knight .grip {
+  height: 4rem;
+  width: 0.7rem;
+  border-radius: 150%;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.knight .knob {
+  position: relative; top: -.5rem;
+  height: 1rem; width: 1rem;
+  background-color: hsl(0, 0%, 80%);
+}
