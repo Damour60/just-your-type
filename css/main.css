@@ -22,7 +22,7 @@ span {
 }
 
 .contain {
-height: 100vh;
+  height: 100vh;
 }
 
 .smoke {
@@ -32,22 +32,26 @@ height: 100vh;
 .smoke:hover {
   animation: animate 1500ms linear forwards;
 }
+
 @keyframes animate {
-  0%{
-    transform: rotate(0deg) translateY(0px);
+
+  0% {
+    transform: rotate(0) translateY(0);
     opacity: 1;
     filter: blur(1px);
   }
-    90%{
 
-      opacity: 1;
-      filter: blur(20px);
-    }
+  90% {
 
-    100% {
-        transform: rotate(45deg) translateY(-200px);
-        opacity: 0;
-    }
+    opacity: 1;
+    filter: blur(20px);
+  }
+
+  100% {
+    transform: rotate(45deg) translateY(-200px);
+    opacity: 0;
+  }
+
 }
 
 .smoke p:nth-child(1) {
@@ -59,7 +63,16 @@ height: 100vh;
 }
 
 .sword {
-  animation: 5s attack cubic-bezier(0,1.38,.83,.67) infinite;
+  animation: 5s cubic-bezier(0, 1.38, .83, .67) infinite;
+
+  transition: transform 1s;
+  display: inline-block;
+  margin: 2rem;
+
+  transform-origin: 50% 77%;
+
+  transform-origin: center;
+  transform: rotate(45deg);
 }
 
 .swords {
@@ -68,15 +81,7 @@ height: 100vh;
   top: 50%;
   left: 5em;
   transform: translateY(-50%);
-    text-align: center;
-}
-
-.sword {
-  transition: transform 1s;
-  display: inline-block;
-  margin: 2rem;
-
-  transform-origin: 50% 77%;
+  text-align: center;
 }
 
 .blade {
@@ -85,9 +90,7 @@ height: 100vh;
 
 .knob {
 
-
   border-radius: 50%;
-
 }
 
 .blade, .grip, .knob {
@@ -110,33 +113,30 @@ height: 100vh;
   box-shadow: -.5rem 0 0 0 hsla(0, 0%, 43%, .5) inset;
 }
 
-.knight .guard, .knight  .grip {
+.knight .guard, .knight .grip {
   background-color: hsl(53, 7%, 41%);
 }
 
 .knight .guard {
-  height: 0.45rem;
+  height: .45rem;
   width: 100%;
   border-radius: 33%;
 }
 
 .knight .grip {
   height: 4rem;
-  width: 0.7rem;
+  width: .7rem;
   border-radius: 150%;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
 .knight .knob {
-  position: relative; top: -.5rem;
-  height: 1rem; width: 1rem;
+  position: relative;
+  top: -.5rem;
+  height: 1rem;
+  width: 1rem;
   background-color: hsl(0, 0%, 80%);
-}
-
-.sword {
-  transform-origin: center;
-  transform: rotate(45deg);
 }
 
 .sword2 {
